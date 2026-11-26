@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Étudiants</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">EduManager</div>
+            <span>Gestion Universitaire</span>
+        </nav>
+
+        <div class="hero-content">
+            <div>
+                <span class="tag">ESPACE UNIVERSITAIRE</span>
+                <h1>Bienvenue dans<br>Gestion des Étudiants</h1>
+                <p>Une solution moderne pour organiser et gérer vos étudiants facilement.</p>
+                <a href="#gestion" class="hero-btn">Commencer</a>
+            </div>
+
+            <img
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900"
+                alt="Étudiants à l'université"
+            >
+        </div>
+    </header>
+
+    <main>
+
+        <section class="welcome">
+            <h2>Votre espace de gestion</h2>
+            <p>Gérez les informations de vos étudiants dans un seul endroit.</p>
+        </section>
+
+        <section class="dashboard">
+            <div class="stat-card">
+                <div class="stat-icon">🎓</div>
+                <h3>Total des étudiants</h3>
+                <p id="studentCount">Nombre d'étudiants : 0</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">📚</div>
+                <h3>Gestion facile</h3>
+                <p>Informations organisées</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">💻</div>
+                <h3>Espace numérique</h3>
+                <p>Application moderne</p>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <img
+                    src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600"
+                    alt="Vie universitaire"
+                >
+                <h3>Vie universitaire</h3>
+                <p>Un espace organisé pour vos étudiants.</p>
+            </div>
+
+            <div class="feature-card">
+                <img
+                    src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600"
+                    alt="Étude et apprentissage"
+                >
+                <h3>Organisation</h3>
+                <p>Consultez et organisez les informations.</p>
+            </div>
+        </section>
+
+        <section class="student-section" id="gestion">
+
+            <h2>Ajouter un étudiant</h2>
+
+            <form id="studentForm">
+                <input type="text" id="nom" placeholder="Nom" required>
+                <input type="text" id="prenom" placeholder="Prénom" required>
+                <input type="email" id="email" placeholder="Email" required>
+
+                <button type="submit">Ajouter</button>
+
+                <button type="button" class="cancel-btn" onclick="cancelEdit()">
+                    Annuler
+                </button>
+            </form>
+
+        </section>
+
+        <section class="student-section">
+
+            <h2>Liste des étudiants</h2>
+
+            <input
+                type="search"
+                id="search"
+                placeholder="Rechercher un étudiant..."
+            >
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Email</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentList"></tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 EduManager - Gestion des Étudiants</p>
+        <p>Une application pour faciliter la gestion universitaire.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+

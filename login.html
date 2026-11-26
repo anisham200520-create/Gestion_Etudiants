@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Gestion des Étudiants</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+    <div class="login-container">
+        <div class="login-image">
+            <h1>Gestion des Étudiants</h1>
+            <p>Une solution simple pour gérer les étudiants de votre institut.</p>
+        </div>
+
+        <div class="login-form">
+            <h2>Bienvenue</h2>
+            <p>Connectez-vous à votre espace</p>
+
+            <form id="loginForm">
+                <label>Email</label>
+                <input type="email" id="loginEmail"
+                       placeholder="Votre email" required>
+
+                <label>Mot de passe</label>
+                <input type="password" id="loginPassword"
+                       placeholder="Votre mot de passe" required>
+
+                <button type="submit">Se connecter</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById("loginEmail").value;
+            const password = document.getElementById("loginPassword").value;
+
+            if (email === "admin@gmail.com" && password === "123456") {
+                alert("Connexion réussie !");
+                window.location.href = "index.html";
+            } else {
+                alert("Email ou mot de passe incorrect !");
+            }
+        });
+    </script>
+
+</body>
+</html>
